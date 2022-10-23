@@ -35,7 +35,7 @@ public class Lab1 extends Point3d {
 
     }
 
-    public static double computeArea(Point3d a,Point3d b,Point3d c)
+    /*public static double computeArea(Point3d a,Point3d b,Point3d c)
     {
         double ABx = b.getX() - a.getX();
         double ABy = b.getY() - a.getY();
@@ -49,14 +49,14 @@ public class Lab1 extends Point3d {
         double modulC = Math.sqrt(Math.pow(forDeti,2) + Math.pow(forDetj,2) + Math.pow(forDetk,2));
         double answer = 1.0/2 * modulC;
         return answer;
-    }
+    }*/
 
-    /*public static double computeArea(Point3d obj1,Point3d obj2,Point3d obj3)
+    public static double computeArea(Point3d obj1,Point3d obj2,Point3d obj3) //Площадь треугольника по формуле Герона
     {
-        double a = obj2.getX() - obj1.getX();
-        double b = obj2.distanceTo(obj3);
-        double c = obj3.distanceTo(obj1);
+        double a = Math.sqrt(Math.pow(obj1.getX()-obj2.getX(),2) + Math.pow(obj1.getZ2()-obj2.getZ2(),2) + Math.pow(obj1.getY()-obj2.getY(),2));
+        double b = Math.sqrt(Math.pow(obj2.getX()-obj3.getX(),2) + Math.pow(obj2.getZ2()-obj3.getZ2(),2) + Math.pow(obj2.getY()-obj3.getY(),2));
+        double c = Math.sqrt(Math.pow(obj1.getX()-obj3.getX(),2) + Math.pow(obj1.getZ2()-obj3.getZ2(),2) + Math.pow(obj1.getY()-obj3.getY(),2));
         double p = (a + b + c)/2;
         return Math.sqrt(p*(p-a)*(p-b)*(p-c));
-    }*/
+    }
 }
